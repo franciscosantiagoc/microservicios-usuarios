@@ -1,4 +1,4 @@
-package com.francisco.microservicios.models;
+package com.francisco.microservicios.app.usuarios.models;
 
 import lombok.Data;
 import lombok.Getter;
@@ -20,6 +20,7 @@ public class Alumno {
     private String email;
 
     @Column(name = "create_at")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
 
     @PrePersist

@@ -1,15 +1,10 @@
 package com.francisco.microservicios.app.usuarios.models;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "alumnos")
-@Data
 public class Alumno {
 
     @Id
@@ -28,4 +23,35 @@ public class Alumno {
         this.createAt = new Date();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
 }
